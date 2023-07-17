@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .c{
+    height: 350px;
+    width: 300px;
+    border: 2px solid blue;
+    background:linear-gradient(rgb(255, 17, 0),rgb(60, 255, 0),rgb(128, 0, 128));
+    left: 300px;top: 200px;
+    border-radius: 20px;
+    position: relative;
+  }
+  h1{
+     text-align: center;
+  }
+  #a{
+     height: 50px;
+     width: 60px;
+     left: 80px;
+     position: relative;
+     
+  }
+  #b{
+     height: 50px;
+     width: 60px;
+     left: 80px;
+     position: relative;
+     
+  }
+  #r{
+    
+     height: 50px;
+     width: 135px;
+     left: 80px;
+     position: relative;
+  }
+  button{
+    height: 25px;
+    width: 25px;
+    left: 80px;
+    position: relative;
+    background-color: aqua;
+  }
+</style>
+<body>
+  <div class="c">
+  <h1><u>Calculator</u></h1>
+  <input id="a" type="number" placeholder="NUM 1">
+  <input id="b" type="number" placeholder="NUM 2"> <br><br>
+  <button onclick="add()">+</button>
+  <button onclick="sub()">-</button>
+  <button onclick="mul()">*</button>
+  <button onclick="mod()">%</button>
+  <button onclick="div()">/</button><br><br>
+  <input id="r" type="number" placeholder="Result">
+</div>
+</body>
+<script>
+    function add()
+    {
+     let num1 = Number(document.getElementById("a").value)
+     let num2 = Number(document.getElementById("b").value)
+     let result = num1+num2;
+     document.getElementById("r").value=result;
+    }
+    function sub()
+    {
+     let num1 = Number(document.getElementById("a").value)
+     let num2 = Number(document.getElementById("b").value)
+     let result = num1-num2;
+     document.getElementById("r").value=result;
+    }
+    function mul()
+    {
+     let num1 = Number(document.getElementById("a").value)
+     let num2 = Number(document.getElementById("b").value)
+     let result = num1*num2;
+     document.getElementById("r").value=result;
+    }
+    function mod()
+    {
+     let num1 = Number(document.getElementById("a").value)
+     let num2 = Number(document.getElementById("b").value)
+     let result = num1%num2;
+     document.getElementById("r").value=result;
+    }
+    function div()
+    {
+     let num1 = Number(document.getElementById("a").value)
+     let num2 = Number(document.getElementById("b").value)
+     let result = num1/num2;
+     document.getElementById("r").value=result;
+    }
+</script>
+</html>
